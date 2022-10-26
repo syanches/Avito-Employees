@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 // MARK: - Private Methods
 extension ViewController {
     private func configureView() {
-        view.translatesAutoresizingMaskIntoConstraints = false
+        title = "Employees"
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)
                 
