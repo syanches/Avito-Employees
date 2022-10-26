@@ -20,5 +20,6 @@ struct Employee {
             Employee(name: "Bob", phoneNumber: "456468", skills: ["Groovy", "Kotlin"]),
             Employee(name: "Marty", phoneNumber: "321789", skills: ["Android", "PHP", "C#"]),
         ]
+            .sorted(by: {$0.name < $1.name})
     }
 }
