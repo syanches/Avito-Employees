@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class EmployeesViewController: UIViewController {
     
     let employees = Employee.EmployeesMock()
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - Private Methods
-extension ViewController {
+extension EmployeesViewController {
     private func configureView() {
         title = "Employees"
         view.backgroundColor = .systemBackground
@@ -47,10 +47,12 @@ extension ViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+//MARK: - TableView Delegate
+extension EmployeesViewController: UITableViewDelegate {
 }
 
-extension ViewController: UITableViewDataSource {
+//MARK: - TableView DataSource
+extension EmployeesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         employees.count
     }
