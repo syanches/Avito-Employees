@@ -77,11 +77,11 @@ extension EmployeesViewController {
     }
 }
 
-//MARK: - TableView Delegate
+//MARK: - UITableViewDelegate
 extension EmployeesViewController: UITableViewDelegate {
 }
 
-//MARK: - TableView DataSource
+//MARK: - UITableViewDataSource
 extension EmployeesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         employeesParsed.count
