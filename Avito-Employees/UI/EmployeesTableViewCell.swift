@@ -14,7 +14,6 @@ class EmployeesTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(systemName: "person.circle")
-        imageView.tintColor = UIColor.init(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
         return imageView
     }()
     
@@ -53,6 +52,7 @@ class EmployeesTableViewCell: UITableViewCell {
         nameLabel.text = name
         phoneLabel.text = phoneNumber
         skillsLabel.text = "Skills: " + skills.joined(separator: ", ")
+        personImageView.tintColor = .randomColor
     }
     
     private func configureCell() {
@@ -60,25 +60,28 @@ class EmployeesTableViewCell: UITableViewCell {
         contentView.addSubview(nameLabel)
         contentView.addSubview(phoneLabel)
         contentView.addSubview(skillsLabel)
-                
+        
+        let personImageHeightWidthConstant: CGFloat = 75
+        let cellMarginConstant: CGFloat = 10
+        
         NSLayoutConstraint.activate([
             personImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             personImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            personImageView.widthAnchor.constraint(equalToConstant: 75),
-            personImageView.heightAnchor.constraint(equalToConstant: 75),
+            personImageView.widthAnchor.constraint(equalToConstant: personImageHeightWidthConstant),
+            personImageView.heightAnchor.constraint(equalToConstant: personImageHeightWidthConstant),
             
-            nameLabel.leadingAnchor.constraint(equalTo: personImageView.trailingAnchor, constant: 10),
+            nameLabel.leadingAnchor.constraint(equalTo: personImageView.trailingAnchor, constant: cellMarginConstant),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: cellMarginConstant),
             
             phoneLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             phoneLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             phoneLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
             
             skillsLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
-            skillsLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            skillsLabel.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: 10),
-            skillsLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            skillsLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -cellMarginConstant),
+            skillsLabel.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor, constant: cellMarginConstant),
+            skillsLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -cellMarginConstant),
         ])
     }
 }

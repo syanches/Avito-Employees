@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		285D4E39290FDB3100A902C1 /* CachedURLResponse+ResponseWIth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D4E38290FDB3000A902C1 /* CachedURLResponse+ResponseWIth.swift */; };
+		285D4E3B290FDC7A00A902C1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D4E3A290FDC7A00A902C1 /* UIColor+Extension.swift */; };
 		28B036A8290937970083F279 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B036A7290937970083F279 /* AppDelegate.swift */; };
 		28B036AA290937970083F279 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B036A9290937970083F279 /* SceneDelegate.swift */; };
 		28B036AC290937970083F279 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B036AB290937970083F279 /* EmployeesViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		285D4E38290FDB3000A902C1 /* CachedURLResponse+ResponseWIth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedURLResponse+ResponseWIth.swift"; sourceTree = "<group>"; };
+		285D4E3A290FDC7A00A902C1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		28B036A4290937970083F279 /* Avito-Employees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avito-Employees.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B036A7290937970083F279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28B036A9290937970083F279 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		285D4E3C290FDC9D00A902C1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				285D4E3A290FDC7A00A902C1 /* UIColor+Extension.swift */,
+				285D4E38290FDB3000A902C1 /* CachedURLResponse+ResponseWIth.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		285D4E3D290FDD3200A902C1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				28B036AB290937970083F279 /* EmployeesViewController.swift */,
+				28B036BD290942350083F279 /* EmployeesTableViewCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		285D4E3E290FDD4500A902C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28B036BB29093F6F0083F279 /* Employee.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		285D4E3F290FDD9A00A902C1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				28B036A7290937970083F279 /* AppDelegate.swift */,
+				28B036A9290937970083F279 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		285D4E40290FDDB700A902C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28B036B02909379A0083F279 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		285D4E41290FDE4E00A902C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28B036B22909379A0083F279 /* LaunchScreen.storyboard */,
+				28B036B52909379A0083F279 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		28B0369B290937970083F279 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +114,12 @@
 		28B036A6290937970083F279 /* Avito-Employees */ = {
 			isa = PBXGroup;
 			children = (
-				28B036A7290937970083F279 /* AppDelegate.swift */,
-				28B036A9290937970083F279 /* SceneDelegate.swift */,
-				28B036AB290937970083F279 /* EmployeesViewController.swift */,
-				28B036BD290942350083F279 /* EmployeesTableViewCell.swift */,
-				28B036BB29093F6F0083F279 /* Employee.swift */,
-				28B036B02909379A0083F279 /* Assets.xcassets */,
-				28B036B22909379A0083F279 /* LaunchScreen.storyboard */,
-				28B036B52909379A0083F279 /* Info.plist */,
+				285D4E3F290FDD9A00A902C1 /* Application */,
+				285D4E3C290FDC9D00A902C1 /* Helpers */,
+				285D4E3E290FDD4500A902C1 /* Models */,
+				285D4E40290FDDB700A902C1 /* Resources */,
+				285D4E41290FDE4E00A902C1 /* Supporting Files */,
+				285D4E3D290FDD3200A902C1 /* UI */,
 			);
 			path = "Avito-Employees";
 			sourceTree = "<group>";
@@ -140,11 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285D4E3B290FDC7A00A902C1 /* UIColor+Extension.swift in Sources */,
 				28B036AC290937970083F279 /* EmployeesViewController.swift in Sources */,
 				28B036BE290942350083F279 /* EmployeesTableViewCell.swift in Sources */,
 				28B036BC29093F6F0083F279 /* Employee.swift in Sources */,
 				28B036A8290937970083F279 /* AppDelegate.swift in Sources */,
 				28B036AA290937970083F279 /* SceneDelegate.swift in Sources */,
+				285D4E39290FDB3100A902C1 /* CachedURLResponse+ResponseWIth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K4TX7QV6JP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Avito-Employees/Info.plist";
+				INFOPLIST_FILE = "Avito-Employees/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -313,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K4TX7QV6JP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Avito-Employees/Info.plist";
+				INFOPLIST_FILE = "Avito-Employees/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
